@@ -19,3 +19,6 @@ class Evento(models.Model):
 
     def get_data_evento(self):
         return self.data_evento.strftime('%d/%m/%Y %H:%M')
+
+    def get_data_input_evento(self): #função para retornar o valor da hora do evento em um formato que pode ser lido pelo navegador
+        return self.data_evento.strftime('%Y-%m-%dT%H:%M')
